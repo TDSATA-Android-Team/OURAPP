@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivitySearch"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#FFFFFF"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/returnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_return_black"
+            android:background="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_toStartOf="@id/search"
+            android:layout_toEndOf="@id/returnHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@drawable/shape_search"
+            android:padding="7dp">
+
+            <EditText
+                android:id="@+id/inputSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:background="@null"
+                android:inputType="text"
+                android:hint="请输入查询信息"
+                android:maxLines="1"
+                android:maxLength="40"
+                android:theme="@style/EdiTextColor"
+                tools:ignore="Autofill" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:text="搜索"
+            android:textSize="20sp"
+            android:textColor="@color/themeColor"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <ListView
+            android:id="@+id/searchResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:divider="@null"
+            android:listSelector="@color/transparent"/>
+
+        <ListView
+            android:id="@+id/searchHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:divider="@null"
+            android:listSelector="@color/transparent"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

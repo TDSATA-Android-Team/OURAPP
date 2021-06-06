@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">社团管理</string>
+    <string name="emailTip">若邮箱未验证或未绑定，请联系部长</string>
+</resources>

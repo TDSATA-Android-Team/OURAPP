@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_menu_home"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/leaderboard"
+        android:icon="@drawable/ic_menu_leaderboard"
+        android:title="排行榜" />
+
+    <item
+        android:id="@+id/personalCenter"
+        android:icon="@drawable/ic_menu_personal_center"
+        android:title="我的" />
+
+</menu>

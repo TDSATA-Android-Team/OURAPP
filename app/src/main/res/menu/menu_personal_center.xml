@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <item
+        android:id="@+id/alterCount"
+        android:icon="@drawable/ic_change_message"
+        app:showAsAction="always"
+        android:title="首页"
+        android:checked="true"
+        android:visible="false"
+        tools:visible="true"/>
+
+</menu>

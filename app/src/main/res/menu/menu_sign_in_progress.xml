@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/scan"
+        android:icon="@drawable/ic_scan"
+        android:title=""
+        app:showAsAction="always"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/export"
+        android:icon="@drawable/ic_export"
+        app:showAsAction="ifRoom"
+        android:title=""
+        android:checked="true"/>
+</menu>

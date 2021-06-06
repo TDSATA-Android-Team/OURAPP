@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/themeColor</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="themeColor">#FF7B1A</color>
+    <color name="progressColor">#CCCCCC</color>
+    <color name="falseColor">#7C7C7C</color>
+    <color name="transparent">#00000000</color>
+    <color name="lineColor">#BABABA</color>
+</resources>

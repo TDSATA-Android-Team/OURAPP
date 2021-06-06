@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.ActivityDepartmentInfo"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/themeColor"
+        app:title="部门信息"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="@drawable/ic_return"
+        app:menu="@menu/menu_department_info"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/leaderHead"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_leader"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="部长团"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/leaderBody"
+            android:layout_below="@+id/leaderHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/administrators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/introduceContainer"
+            android:layout_below="@+id/leaderBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/introduceHead"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_introduce"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="6dp"
+                    android:text="部门简介"
+                    android:textColor="#FFFFFF"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/alterInfo"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_change_info"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:ignore="ContentDescription"/>
+
+            <RelativeLayout
+                android:id="@+id/introduceBody"
+                android:layout_below="@+id/introduceHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:background="@drawable/shape_leader_view">
+
+                <TextView
+                    android:id="@+id/departmentInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="这里是部门简介内容"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/introduceFooter"
+            android:layout_below="@+id/introduceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/memberHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/memberTitle"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_member"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="6dp"
+                        android:text="部员列表"
+                        android:textColor="#FFFFFF"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/changeMemberInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="修改部员信息"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_arrows"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/memberHead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F5">
+
+                <ListView
+                    android:id="@+id/memberList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    android:listSelector="@color/transparent"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

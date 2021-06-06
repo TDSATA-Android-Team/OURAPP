@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5F5F5F"
+    tools:context=".activity.ActivitySignInCode"
+    tools:ignore="ButtonStyle">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#5F5F5F"
+        app:navigationIcon="@drawable/ic_return"
+        app:title="我的二维码"
+        app:titleTextColor="#FFFFFF"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:id="@+id/sigInName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="2020科协第二次全体大会"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                tools:text="距离签到结束还有5分钟"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/sigInName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_login_body">
+
+            <TextView
+                android:id="@+id/myName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="张三"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/myNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="19130002"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/myQRCode"
+                    android:layout_width="185dp"
+                    android:layout_height="185dp"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="请在签到时展示该二维码"
+                    android:gravity="center"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

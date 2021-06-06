@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center"
+    android:background="#F2F2F2"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_dialog_exit">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:padding="15dp"
+            android:text="公告实时推送需允许后台运行，是否前往设置?"
+            android:textSize="19sp"
+            android:textColor="#000000"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/notRemind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="不再提醒"
+            android:textSize="16sp"
+            android:theme="@style/CheckBoxColor"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toSetting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="前往设置"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/selector_confirm_button"/>
+
+            <Button
+                android:id="@+id/ignore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="继续"
+                android:textSize="18sp"
+                android:background="@drawable/selector_cancel_button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

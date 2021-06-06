@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/delSignIn"
+        android:icon="@drawable/ic_delete"
+        android:title=""
+        app:showAsAction="always"
+        android:checked="true"
+        android:visible="false"
+        tools:visible="true"/>
+
+</menu>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.ActivityUploadPersonalInfo"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/themeColor"/>
+
+    <RelativeLayout
+        android:id="@+id/completeHead"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/statusBar"
+        android:orientation="horizontal"
+        android:background="@color/themeColor">
+
+        <ImageView
+            android:id="@+id/returnArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_return"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="完善个人信息"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/completeHead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bg_complete"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/bg_pic_complete_top"
+            android:scaleType="fitXY"
+            android:layout_alignParentStart="true"/>
+
+        <LinearLayout
+            android:id="@+id/completeBody"
+            android:layout_below="@id/bg_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:paddingTop="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="25dp"
+            android:background="@drawable/shape_login_body"
+            android:elevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="专业："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/inSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EdiTextColor"
+                    android:gravity="center_vertical"
+                    android:paddingStart="50dp"
+                    android:paddingBottom="15dp"
+                    android:hint="请输入专业"
+                    android:textSize="16sp"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    tools:ignore="RtlSymmetry"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/sex_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/sex_title"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp">
+
+                    <RadioGroup
+                        android:id="@+id/inSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sexMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="男"
+                            android:checked="true"
+                            android:theme="@style/EdiTextColor"/>
+
+                        <RadioButton
+                            android:id="@+id/sexFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="25dp"
+                            android:text="女"
+                            android:theme="@style/EdiTextColor"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电话："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/inPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EdiTextColor"
+                    android:paddingStart="50dp"
+                    android:paddingBottom="15dp"
+                    android:hint="请输入电话号码"
+                    android:textSize="16sp"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:inputType="phone"
+                    tools:ignore="RtlSymmetry"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/inQQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EdiTextColor"
+                    android:paddingStart="50dp"
+                    android:paddingBottom="15dp"
+                    android:hint="请输入QQ号"
+                    android:textSize="16sp"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    tools:ignore="RtlSymmetry"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="辅导员："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/inTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EdiTextColor"
+                    android:paddingStart="65dp"
+                    android:paddingBottom="15dp"
+                    android:hint="请输入辅导员姓名"
+                    android:textSize="16sp"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    tools:ignore="RtlSymmetry"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱："
+                    android:textSize="16sp"
+                    android:textColor="@color/themeColor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/inEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="45dp"
+                    android:theme="@style/EdiTextColor"
+                    android:paddingStart="45dp"
+                    android:paddingBottom="15dp"
+                    android:hint="请输入邮箱(非必填)"
+                    android:textSize="16sp"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="RtlSymmetry"/>
+
+                <TextView
+                    android:id="@+id/verifiedTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:text="已验证"
+                    android:textSize="16sp"
+                    android:textColor="#24BB23"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/unverifiedTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:text="未验证"
+                    android:textSize="16sp"
+                    android:textColor="#f02409"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/completeBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/selector_login_button"
+                android:text="确定"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

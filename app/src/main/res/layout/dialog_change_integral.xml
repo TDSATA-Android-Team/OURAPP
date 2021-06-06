@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_login_body"
+    android:padding="25dp"
+    android:layout_margin="20dp"
+    tools:ignore="HardcodedText,ButtonStyle"
+    tools:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/changeIntegralTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加或删减积分:"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/counter"
+        android:layout_below="@+id/changeIntegralTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_change_integral">
+
+            <ImageButton
+                android:id="@+id/minusCount"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_down"
+                android:background="@drawable/selector_btn_down"/>
+
+            <TextView
+                android:id="@+id/changeValueText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/minusCount"
+                android:layout_toStartOf="@id/addCount"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/addCount"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_change_add"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/selector_btn_add"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/reasonTitle"
+        android:layout_below="@id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="说明（非必填）:"
+        android:textSize="18sp"
+        android:textColor="#000000"/>
+
+    <RelativeLayout
+        android:id="@+id/inputReasonLayout"
+        android:layout_below="@+id/reasonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_ch_editx"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/inputReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:maxLength="50"
+                android:theme="@style/EdiTextColor"
+                android:hint="请输入..."/>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/inputReasonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提交"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/selector_login_button"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

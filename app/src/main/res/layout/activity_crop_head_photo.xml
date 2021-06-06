@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityCropHeadPhoto"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/themeColor"
+        app:title="裁剪图片"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="@drawable/ic_return"/>
+
+    <com.tdsata.ourapp.view.CropPictureView
+        android:id="@+id/cropPhoto"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/cropFooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/cropFooter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/selector_login_button"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

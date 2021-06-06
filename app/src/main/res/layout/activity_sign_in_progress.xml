@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivitySignInProgress">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#FFFFFF"
+        app:title="签到进度"
+        app:titleTextColor="#000000"
+        app:navigationIcon="@drawable/ic_return_black"
+        app:menu="@menu/menu_sign_in_progress"/>
+
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        tools:text="签到活动标题"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:maxLength="30"
+        android:layout_marginTop="5dp"
+        android:maxLines="3"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"/>
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityTitle"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        tools:text="距离签到结束还有5分钟"
+        android:textSize="15sp"
+        android:gravity="end"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/endTime">
+
+        <RelativeLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ListView
+                android:id="@+id/signInStatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

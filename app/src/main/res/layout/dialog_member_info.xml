@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:id="@+id/memberContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_ch_editx"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/memberNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    tools:text="19110000"
+                    android:hint="请输入学号"
+                    android:paddingStart="10dp"
+                    tools:ignore="Autofill,RtlSymmetry"
+                    android:maxLines="1"
+                    android:maxLength="40"
+                    android:inputType="number"
+                    android:theme="@style/EdiTextColor"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_ch_editx"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/memberName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    tools:text="张三"
+                    android:hint="请输入姓名"
+                    android:paddingStart="10dp"
+                    tools:ignore="Autofill,RtlSymmetry"
+                    android:maxLines="1"
+                    android:maxLength="40"
+                    android:inputType="text"
+                    android:theme="@style/EdiTextColor"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="请选择成员身份："
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/memberFlag3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button=" @null"
+                    android:background="@drawable/selector_radiobutton"
+                    android:text="部长"
+                    android:textColor="@drawable/selector_text_radiobutton"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:checked="true"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/memberFlag2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:button=" @null"
+                    android:background="@drawable/selector_radiobutton"
+                    android:text="副部长"
+                    android:textColor="@drawable/selector_text_radiobutton"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/memberFlag1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button=" @null"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="组长"
+                    android:textColor="@drawable/selector_text_radiobutton"
+                    android:focusable="true" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/memberFlag0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:button=" @null"
+                    android:background="@drawable/selector_radiobutton"
+                    android:text="部员"
+                    android:textColor="@drawable/selector_text_radiobutton"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/memberContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_login_button"
+                android:text="确定"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

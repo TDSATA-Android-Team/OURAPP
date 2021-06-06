@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/themeColor"/>
+
+    <RelativeLayout
+        android:id="@+id/personalHead"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/statusBar"
+        android:background="@color/themeColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/PersonalInformationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personalHead"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/personalDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="10dp">
+
+            <com.tdsata.ourapp.view.HeadPortraitView
+                android:id="@+id/headPhoto"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/toMyInfo"
+                android:layout_toEndOf="@id/headPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张三"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学号："
+                            android:textColor="#5F5F5F"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19130000"
+                            android:textColor="#5F5F5F"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_arrows" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/headPhoto"
+                android:layout_marginTop="10dp"
+                android:background="#eaeaea" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="积分"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    tools:text="100"
+                    android:textColor="#FF7B1A"
+                    android:textSize="21sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="部门"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:text="软研部"
+                    android:textColor="#FF7B1A"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="身份"
+                    android:textColor="#5F5F5F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/flag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:text="部员"
+                    android:textColor="#FF7B1A"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PersonalInformationLayout"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/alterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_personal"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/PersonalCenterSetUpChangeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_changepassword" />
+
+            <TextView
+                android:id="@+id/PersonalCenterSetUpChangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/PersonalCenterSetUpChangeImage"
+                android:text="修改密码"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/PersonalCenterSetUpChangeText"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:background="#eaeaea" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_arrows" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/departmentMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/alterPassword"
+            android:background="@drawable/selector_personal"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/PersonalCenterSetUpInformImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_departmentmessage"/>
+
+            <TextView
+                android:id="@+id/PersonalCenterSetUpInformText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@+id/PersonalCenterSetUpInformImage"
+                android:text="部门信息"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ArrowImage3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_arrows" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/PersonalCenterSetUpInformText"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:background="#eaeaea" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/exitLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/departmentMessage"
+            android:background="@drawable/selector_personal"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/PersonalCenterSetUpExitImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_exit" />
+
+            <TextView
+                android:id="@+id/PersonalCenterSetUpExitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/PersonalCenterSetUpExitImage"
+                android:text="退出登录"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/PersonalCenterSetUpExitText"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:background="#eaeaea" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_arrows" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/aboutOur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exitLogin"
+            android:background="@drawable/selector_personal"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/PersonalCenterSetUpAboutImage"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_about" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="19dp"
+                android:layout_toEndOf="@+id/PersonalCenterSetUpAboutImage"
+                android:text="关于我们"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_arrows" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

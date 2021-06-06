@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ImageCaptcha">
+        <attr name="number" format="integer"/>
+        <attr name="codeSize" format="dimension"/>
+        <attr name="ignoreCase" format="boolean"/>
+        <attr name="removeChars" format="string"/>
+        <attr name="removeNumbers" format="boolean"/>
+        <attr name="removeCapitalLetters" format="boolean"/>
+        <attr name="removeSmallLetter" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PageProgressBar">
+        <attr name="baseColor" format="color"/>
+        <attr name="fillColor" format="color"/>
+        <attr name="nodeAmount" format="integer"/>
+        <attr name="nodeDiameter" format="dimension"/>
+        <attr name="nodeTextSize" format="dimension"/>
+        <attr name="nodeTextColor" format="color"/>
+        <attr name="lineHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CropPictureView">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="transparentScale" format="float"/>
+        <attr name="cropFrameColor" format="color"/>
+        <attr name="cropFrameStrokeWidth" format="dimension"/>
+        <attr name="cropFrameWeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScanShadowView">
+        <attr name="scanWidth" format="dimension"/>
+        <attr name="scanLineColor" format="color"/>
+        <attr name="fourCornersColor" format="color"/>
+        <attr name="shadowTransparency" format="float"/>
+        <attr name="tipMessage" format="string"/>
+        <attr name="tipMessageSize" format="dimension"/>
+        <attr name="distance" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="RadiusImageView">
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+
+</resources>

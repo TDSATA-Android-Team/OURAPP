@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:ignore="HardcodedText,ButtonStyle,ContentDescription">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/themeColor"/>
+
+    <!--首页头部开始-->
+
+    <RelativeLayout
+        android:id="@+id/indexHead"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/statusBar"
+        android:background="@color/themeColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:text="首页"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
+
+        <ImageButton
+            android:id="@+id/addAnnouncement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/themeColor"
+            android:src="@drawable/ic_release"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <!--首页头部结束-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@+id/indexHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/indexBodyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <!--轮播图区域开始-->
+
+                    <RelativeLayout
+                        android:id="@+id/carouselContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/carouselViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/carouselPoints"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"/>
+
+                    </RelativeLayout>
+
+                    <!--轮播图区域结束-->
+
+                    <!--主功能区域开始-->
+
+                    <LinearLayout
+                        android:layout_below="@+id/carouselContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_index_item">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            tools:ignore="DisableBaselineAlignment">
+
+                            <LinearLayout
+                                android:id="@+id/search"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:elevation="5dp"
+                                android:background="@drawable/shape_index_item"
+                                android:clickable="true"
+                                android:padding="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginStart="5dp"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_search"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="搜索"
+                                    android:textSize="17sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_gravity="center_vertical"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/signIn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:elevation="5dp"
+                                android:background="@drawable/shape_index_item"
+                                android:clickable="true"
+                                android:padding="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="6dp"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_signin"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="签到"
+                                    android:textSize="17sp"
+                                    android:textColor="#000000"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="15dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4.5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginEnd="60dp"
+                            android:background="@drawable/shape_index_view"/>
+
+                    </LinearLayout>
+
+                    <!--主功能区域结束-->
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/indexAnnouncement"
+                    android:layout_below="@+id/indexBodyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+
+                    <!--公告区域开始-->
+
+                    <LinearLayout
+                        android:id="@+id/indexAnnouncementHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_announcement"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="公告速览"
+                                android:textColor="#FFFFFF"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="17dp"/>
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_plane2"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_below="@+id/indexAnnouncementHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/announcementTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:text="———— 暂无公告 ————"
+                            android:textSize="17sp"/>
+
+                        <LinearLayout
+                            android:id="@+id/announcementLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"/>
+
+                    </LinearLayout>
+
+                    <!--公告区域结束-->
+
+                </RelativeLayout>
+
+                <!--积分前十排名开始-->
+
+                <RelativeLayout
+                    android:layout_below="@+id/indexAnnouncement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/indexTopTenPointsHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="143dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_integraltext"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="积分前十预览"
+                                android:textColor="#FFFFFF"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="12dp"/>
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_plane"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/homeLeaderboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/indexTopTenPointsHead"
+                        android:orientation="vertical"/>
+
+                </RelativeLayout>
+
+                <!--积分前十排名结束-->
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

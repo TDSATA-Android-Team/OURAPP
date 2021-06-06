@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardCodedText,ButtonStyle,AutoFill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_login_body"
+        android:padding="15dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_change_password"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/inputSignInTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="10dp"
+                android:hint="请输入签到活动名称"
+                android:inputType="text"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:theme="@style/EdiTextColor"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_change_password"
+            android:padding="10dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/inputContinueTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="10dp"
+                android:hint="请输入签到有效时长"
+                android:inputType="number"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:theme="@style/EdiTextColor"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:id="@+id/releaseView"
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:background="#BDBDBD"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/inputContinueTime"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/releaseView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="分钟"
+                android:textSize="17sp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:id="@+id/selectDateParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_change_password"
+                android:padding="8dp"
+                android:clickable="true"
+                tools:ignore="NestedWeights"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/selectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    tools:text="2021-1-29"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectTimeParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_change_password"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_dialog_time"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/selectTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:textSize="15sp"
+                    tools:text="18:00" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:theme="@style/Picker"/>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:layout_centerHorizontal="true"
+                android:calendarViewShown="false"
+                android:visibility="gone"
+                android:theme="@style/Picker"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/releaseSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_login_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="发布签到"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

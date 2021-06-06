@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <!--首页排行榜样式-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_index_item"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/ranking"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="1"
+            android:textSize="20sp"
+            android:textColor="@color/themeColor"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"/>
+
+        <com.tdsata.ourapp.view.HeadPortraitView
+            android:id="@+id/headPhoto"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@+id/ranking"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/headPhoto"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            tools:text="王翠花"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            tools:text="1000"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

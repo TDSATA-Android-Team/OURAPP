@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改人："
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/editorMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12345678 猪老三"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="被修改人："
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/changeMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12345678 张三"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分变更："
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/changeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+10"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="说明："
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="无"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eaeaea"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

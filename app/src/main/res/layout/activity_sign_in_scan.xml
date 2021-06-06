@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".activity.ActivitySignInScan">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#000000"
+        app:navigationIcon="@drawable/ic_return"
+        app:titleTextColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.tdsata.ourapp.view.ScanShadowView
+        android:id="@+id/scanShadow"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fourCornersColor="@color/themeColor"
+        app:scanLineColor="@color/themeColor"
+        app:scanWidth="750px"
+        app:tipMessage="将二维码放入框内"
+        tools:ignore="PxUsage"/>
+
+</RelativeLayout>

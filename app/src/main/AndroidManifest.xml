@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tdsata.ourapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.ActivityChangeMemberInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityDepartmentInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCropHeadPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityUploadPersonalInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityAboutOur"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityPersonalInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySearch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityStartPicture"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivitySignInProgress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySignInCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySignInScan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySignIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityDepartmentSelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityAlterPassword"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.PullMessageService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pull" />
+
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>
